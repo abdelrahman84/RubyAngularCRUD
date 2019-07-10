@@ -1,1 +1,35 @@
-<p>customer-list works!</p>
+<div class="card" style ="margin-top:10px;">
+    <div class="card-title">
+        Customers
+    </div>
+      <div class="card-body">
+         <div class ="table-responsive">
+             <table class = "table">
+                 <thead>
+                     <tr>
+                         
+                         <th *ngFor="let column of columns">
+                            {{column}}
+                         </th>
+                         <th>Actions</th>
+                     </tr>
+                 </thead>
+ 
+                 <tbody>
+                     <tr *ngFor="let row of rows">
+                         
+ 
+                         <td *ngFor="let column of columns">
+                           {{row[column]}}
+                         </td>
+                         <button (click)="delete(row['id'])" class="btn btn-primary">delete</button> 
+                         <button (click)="update(row['id'])" class="btn btn-warning">update</button> 
+                     </tr>
+                 </tbody>
+             </table>
+ 
+ 
+         </div>
+     
+     </div>
+ </div>
