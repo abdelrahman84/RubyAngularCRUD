@@ -10,9 +10,9 @@ import {Router} from '@angular/router'
 })
 export class ProductListComponent implements OnInit {
 
-  public columns = ['id','name']
+  private columns = ['id','name']
 
-  public rows : Array<Product>;
+  private rows : Array<Product>;
 
   constructor(public apiService: ApiService, public router: Router) { }
 
@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  public delete(id:string) {
+  private delete(id:string) {
     console.log("delete: "+id);
     var path = 'products/'+id;
     this.apiService.delete(path).subscribe((r)=> {
@@ -41,7 +41,7 @@ export class ProductListComponent implements OnInit {
 
   }
 
-  public update(id:string){
+  private update(id:string){
     console.log("update: "+id);
     this.router.navigateByUrl('/products/add/'+id);
   }
