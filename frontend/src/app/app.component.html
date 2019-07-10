@@ -1,0 +1,22 @@
+<div class="container">
+  <div class = "jumbotron">
+    <h1>This is the main page for the CRUD routes</h1>
+  </div>
+    <div class="list-group">
+      <div class="panel-heading" style="background: greenyellow;">
+
+        <a routerLink = "/products" class="list-group-item">Products</a>
+        <a routerLink = "/orders" class="list-group-item">Orders</a>
+        <a routerLink = "/customers" class="list-group-item">Customers</a>
+        <a routerLink = "/products/add" class="list-group-item">Add Product</a>
+        <a routerLink = "/orders" class="list-group-item">Add Orders</a>
+        <a routerLink = "/customers" class="list-group-item">Add Customers</a>
+      </div>
+        
+       <div class="panel-body">
+      <router-outlet></router-outlet>
+    </div>
+    </div>
+  </div>
+
+
